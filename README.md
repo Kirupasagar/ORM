@@ -24,7 +24,7 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-
+```
 models.py
 
 from django.db import models from django.contrib import admin class Bank (models.Model): loan_id=models.IntegerField(primary_key=True) cust_acno=models.IntegerField() cust_name=models.CharField(max_length=100) loan_amt=models.FloatField() loan_type=models.CharField(max_length=100)
@@ -34,7 +34,7 @@ class BankAdmin(admin.ModelAdmin): list_display=('loan_id','loan_type','loan_amt
 admin.py
 
 from django.contrib import admin from .models import Bank,BankAdmin admin.site.register(Bank,BankAdmin)
-
+```
 ## OUTPUT
 
 ![Screenshot (8)](https://github.com/user-attachments/assets/dea29a71-dbf6-47d7-b42b-f1db555fca73)
